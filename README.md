@@ -1,1 +1,1 @@
-# qa_guru_python_6_23
+Realising simple mobile tests for iOS and Android 
