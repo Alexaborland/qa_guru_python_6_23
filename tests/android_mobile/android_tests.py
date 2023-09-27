@@ -1,6 +1,6 @@
 from allure import step
 from appium.webdriver.common.appiumby import AppiumBy
-from selene import browser, have
+from selene import browser, have, be
 
 
 def test_search_article():
@@ -16,7 +16,9 @@ def test_search_article():
 
 def test_open_article():
     with step("Tap on the article"):
-        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_container")).click()
+        browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/horizontal_scroll_list_item_text')).click()
 
     with step("Verify the name of article"):
-        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/page_list_item_title")).should(have.text("Appium"))
+        browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/horizontal_scroll_list_item_text')).should(
+            be.not_.present)
+        browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/view_news_fullscreen_story_text')).should(be.present)
