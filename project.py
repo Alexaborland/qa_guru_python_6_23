@@ -12,7 +12,7 @@ class Config(pydantic_settings.BaseSettings):
     app_url: str = 'bs://sample.app'
     project_name: str = 'First Python mobile project'
     build_name: str = 'browserstack-build-1'
-    session_name: str = 'BStack IOS and Android tests'
+    session_name: str = 'BStack IOS and Android mobile_tests'
     ios_version: str = '13'
     ios_device: str = 'iPhone 11 Pro'
     android_device: str = 'Samsung Galaxy S22'
